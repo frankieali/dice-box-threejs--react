@@ -1,0 +1,10 @@
+#dice-box {
+	position: relative;
+	background-image: url(~/public/images/woodgrain2.jpg);
+	background-size: cover;
+  box-sizing: border-box;
+}
+
+#scene-container {
+  height: 100vh;
+}
