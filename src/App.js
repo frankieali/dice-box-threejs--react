@@ -1,7 +1,8 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.css';
 import DiceBox from './components/DiceBox';
 import RollButton from './components/RollButton';
+import DisplayResults from './components/DisplayResults';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
         <DiceBox>
           <RollButton />
         </DiceBox>
+        <DisplayResults />
       </div>
     </div>
   );

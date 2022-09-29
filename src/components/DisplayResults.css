@@ -1,0 +1,30 @@
+#displayResults {
+  position: absolute;
+  bottom: 20px;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  background-color: #ccc;
+  padding: 4px 8px 6px 8px;
+  border-radius: 6px;
+}
+
+#displayResults span {
+  padding: 4px;
+}
+
+.die-result::after {
+  display: inline-block;
+  content: ","
+}
+.die-result:last-of-type:after {
+  content: ""
+}
+
+.equals {
+
+}
+
+.total {
+  font-weight: bold;
+}

@@ -6,13 +6,12 @@ import PubSub from "pubsub-js"
 const DiceBox = (props) => {
   const { children } = props
   let boxRef = useRef();
-  let Box = useRef()
   
 
   // setup DiceBox
   useEffect(()=>{
     async function SetUpDiceBox(){
-      Box = new DiceBoxThree("#scene-container",{
+      const Box = new DiceBoxThree("#scene-container",{
         assetPath: "",
         sounds: true,
         volume: 100,
@@ -20,7 +19,8 @@ const DiceBox = (props) => {
         baseScale: 140,
         strength: 1,
         onRollComplete: (results) => {
-          console.log(`I've got results :>> `, results);
+          // console.log(`I've got results :>> `, results);
+          PubSub.publish('results', {results})
         }
       });
       
